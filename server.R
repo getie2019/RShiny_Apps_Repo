@@ -1,8 +1,8 @@
 library(shiny)
 server<-function(input, output){
   output$myhist<-renderPlot({
-    col<-as.numeric(input$var)
-    hist(iris[,col],col=input$color, breaks=seq(0, max(iris[,col]),l=input$bins),xlab = names(iris[col]), main=paste0("Histogram of Iris dataset for ",names(iris[col])))
+    variables<-input$var
+    hist(iris[[variables]],col=input$color, breaks=seq(0, max(iris[variables]),l=input$bins),xlab = names(iris[variables]), main=paste0("Histogram of Iris dataset for ",names(iris[variables])))
     
   })
   
