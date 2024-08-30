@@ -1,0 +1,3 @@
+git remote add origin https://github.com/getie2019/RShiny_Apps_Repo.git
+git branch -M main
+git push -u origin main
